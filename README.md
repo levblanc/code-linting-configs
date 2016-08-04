@@ -2,6 +2,7 @@
 ---
 
 ### 文件夹结构
+```
 code-linting-configs
 ├── .editorconfig                   editorconfig插件配置文件
 ├── .es5.eslintrc                   eslint es5规范配置文件
@@ -19,7 +20,7 @@ code-linting-configs
 │   ├── jsBeautify.config.json      js文件格式化配置
 │   └── lessBeautify.config.json    less文件格式化配置
 └── package.json                    npm说明文件
-
+```
 
 ### .eslintrc
 为了区分两个不同版本的配置文件，特意在文件名称中加上版本前缀。
