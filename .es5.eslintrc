@@ -1,0 +1,51 @@
+{
+    "extends": "eslint-config-airbnb-es5",
+    //=================================================
+    // globals:
+    // http://eslint.org/docs/user-guide/configuring#specifying-globals
+    // true to allow the variable to be overwritten
+    // or
+    // false to disallow overwriting
+    //=================================================
+    "globals": {
+        "define"            : true,
+        "_"                 : true,
+        "$"                 : true,
+        "Backbone"          : true,
+        "__DEV__"           : true,
+        "__ENV_ALPHA__"     : true,
+        "__ENV_BETA__"      : true,
+        "__ENV_RELEASE__"   : true,
+        "__USE_MOCKUP_API__": true
+    },
+    //=================================================
+    // rules:
+    // http://eslint.org/docs/user-guide/configuring#configuring-rules
+    // "off" or 0 - turn the rule off
+    // "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+    // "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+    //=================================================
+    "rules": {
+        // 设定缩进为4个空格
+        "indent" : [2, 4],
+        // 允许object键值后有空格，否则对齐等号会报错
+        "key-spacing" : 0,
+        // function 可以不需要名称，例如，接受Foo.prototype.bar = function () {};
+        "func-names": [2, "never"],
+        "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+        // 强制js语句结尾不加分号
+        "semi": [2, "never"],
+        // 允许代码中有console.log
+        "no-console" : 0,
+        // 允许代码中有alert
+        "no-alert" : 0,
+        // 当且仅当function有return时，才强制js doc里面有return type
+        "valid-jsdoc": [2, {"requireReturn": false}],
+        // 允许在作用域内重复使用'err'
+        "no-shadow": [2, { "allow": ["err"] }],
+        // 使用new关键字时，'webpackHtmlPlugin'不需要首字母大写
+        "new-cap": [2, { "newIsCapExceptions": ["webpackHtmlPlugin"] }],
+        // 允许function的参数定义后不使用
+        "no-unused-vars": [2, { "args": "none" }]
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "code-linting-configs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "jsformat": "node bin/jsBeautify.js",
+    "jslint": "eslint beautify_demo/after.js --config .es5.eslintrc",
+    "lessformat": "node bin/lessBeautify.js",
+    "lesslint": "lesshint beautify_demo/after.less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/luoyi/code-linting-configs.git"
+  },
+  "keywords": [
+    "code",
+    "lint"
+  ],
+  "author": "luoyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/luoyi/code-linting-configs/issues"
+  },
+  "homepage": "https://gitlab.com/luoyi/code-linting-configs#README",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.2.0",
+    "eslint-config-airbnb-es5": "^1.0.9",
+    "eslint-plugin-react": "^5.2.2",
+    "glob": "^7.0.5",
+    "js-beautify": "^1.6.3",
+    "lesshint": "^2.0.2"
+  }
+}

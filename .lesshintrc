@@ -1,0 +1,13 @@
+{
+    "fileExtensions": [".less"],
+    "spaceAfterPropertyColon": {
+        "enabled": true,
+        "style": "one_space"
+    },
+    // 允许值为0时后面不加单位
+    "zeroUnit": false,
+    // 不强制按字母顺序排列属性
+    "propertyOrdering": false,
+    // 不强制颜色值使用六位
+    "hexLength": false
+}
