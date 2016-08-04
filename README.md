@@ -2,7 +2,7 @@
 ---
 
 ### 文件夹结构
-```
+```bash
 code-linting-configs
 ├── .editorconfig                   editorconfig插件配置文件
 ├── .es5.eslintrc                   eslint es5规范配置文件
