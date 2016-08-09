@@ -23,29 +23,41 @@
   // "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
   //=================================================
   "rules": {
-    "indent"                 : [2, 2, {"SwitchCase": 1}],
+    "indent"                            : [2, 4, {"SwitchCase": 1}],
     // 防止webpack设置了resolve.alias的路径报错
     // 无法resolve的modules，webpack打包时就会报错，所以这项可以关闭
-    "import/no-unresolved"   : 0,
-    "comma-dangle"           : [2, "only-multiline"],
+    "import/no-unresolved"              : 0,
+    "comma-dangle"                      : [2, "only-multiline"],
     // 允许object键值后有空格，否则对齐from关键字和等号会报错
-    "key-spacing"            : 0,
+    "key-spacing"                       : 0,
     // 允许多个空格，否则对齐from关键字和等号会报错
-    "no-multi-spaces"        : 0,
+    "no-multi-spaces"                   : 0,
     // 允许代码中有console.log
-    "no-console"             : 0,
+    "no-console"                        : 0,
     // 允许代码中有alert
-    "no-alert"               : 0,
+    "no-alert"                          : 0,
     // 允许简写代码，如：
     // a && b()
-    // a ? b() : c()
-    "no-unused-expressions"  : [2, { "allowShortCircuit": true, "allowTernary": true }],
-    // code max-len: 120, tabWidth: 2
-    "max-len"                : [2, 120, 2],
+    // a ? b()                          : c()
+    "no-unused-expressions"             : [2, { "allowShortCircuit": true, "allowTernary": true }],
+    // code max-len                     : 120, tabWidth: 4
+    "max-len"                           : [2, 120, 4],
     // 强制不使用分号
-    "semi"                   : [2, "never"],
+    "semi"                              : [2, "never"],
+    // 允许在作用域内重复使用'err'
+    "no-shadow"                         : [2, { "allow": ["err"] }],
     // 强制在jsx的花括号中间必须有空格
-    "react/jsx-curly-spacing": [2, "always"]
+    "react/jsx-curly-spacing"           : [2, "always"],
+    // jsx结束的尖括号位置与最后一个属性在同一行
+    "react/jsx-closing-bracket-location": [2, "after-props"],
+    // 允许jsx component第一个属性与tag同行
+    "react/jsx-first-prop-new-line"     : [2, "never"],
+    // 不检测jsx tag缩进
+    // esformatter会把tag格式化成与jsx expression 对齐
+    "react/jsx-indent"                  : 0,
+    // 不检测jsx component属性缩进
+    // esformatter会格式化成与第一个属性对齐
+    "react/jsx-indent-props"            : 0
   },
   "plugins": [
     "react", "import"
@@ -66,6 +78,8 @@
     "__ENV_BETA__"      : true,
     "__ENV_RELEASE__"   : true,
     "__TEST__"          : true,
-    "__USE_MOCKUP_API__": true
+    "__USE_MOCKUP_API__": true,
+    "__API_PREFIX__"    : true,
+    "__ROUTE_BASE__"    : true
   }
 }

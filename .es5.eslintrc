@@ -27,7 +27,7 @@
     //=================================================
     "rules": {
         // 设定缩进为4个空格
-        "indent" : [2, 4],
+        "indent" : [2, 4, {"SwitchCase": 1}],
         // 允许object键值后有空格，否则对齐等号会报错
         "key-spacing" : 0,
         // function 可以不需要名称，例如，接受Foo.prototype.bar = function () {};
@@ -43,8 +43,6 @@
         "valid-jsdoc": [2, {"requireReturn": false}],
         // 允许在作用域内重复使用'err'
         "no-shadow": [2, { "allow": ["err"] }],
-        // 使用new关键字时，'webpackHtmlPlugin'不需要首字母大写
-        "new-cap": [2, { "newIsCapExceptions": ["webpackHtmlPlugin"] }],
         // 允许function的参数定义后不使用
         "no-unused-vars": [2, { "args": "none" }]
     }
