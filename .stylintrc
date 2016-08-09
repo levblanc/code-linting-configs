@@ -1,0 +1,5 @@
+{
+    "colons": "never", // 强制不加冒号
+    "colors": false,  // 颜色值不强制使用变量
+    "sortOrder": false // 不强制按照字母顺序排列属性
+}
